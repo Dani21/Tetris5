@@ -1,0 +1,21 @@
+{
+	"name": "HTML5 Tetris",
+	"description": "A simple arcade game where you continuously move falling blocks. As you entirely fill up each row, it'll be cleared. If you let the blocks stack up too high, then you lose!",
+	"launch_path": "index.html",
+	"version": "0.5.0",
+	"icons": {
+		"16": "icon16_2.png",
+		"30": "icon30_2.png",
+		"32": "icon32_2.png",
+		"60": "icon60_2.png",
+		"64": "icon64_2.png",
+		"128": "icon128_2.png",
+		"256": "icon256_2.png"
+	},
+	"orientation": ["portrait"],
+	"developer": {
+		"name": "Pluto Creations",
+		"url": "https://github.com/Dani21/Tetris5/"
+	},
+	"default_locale": "en"
+}

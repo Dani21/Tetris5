@@ -1,0 +1,281 @@
+/*
+	Daniel
+	COMP 127 - Project 5
+	JavaScript Game - Tetris
+	style.css - Provides the majority of styling for the game of tetris
+*/
+#htmltetris .tetrimino.O .mino, .tetrisgrid .O {
+	background-color: yellow;
+}
+#htmltetris .tetrimino.I .mino, .tetrisgrid .I {
+	background-color: turquoise;
+}
+#htmltetris .tetrimino.T .mino, .tetrisgrid .T {
+	background-color: darkmagenta;
+}
+#htmltetris .tetrimino.L .mino, .tetrisgrid .L {
+	background-color: orange;
+}
+#htmltetris .tetrimino.J .mino, .tetrisgrid .J {
+	background-color: royalblue;
+}
+#htmltetris .tetrimino.S .mino, .tetrisgrid .S {
+	background-color: lawngreen;
+}
+#htmltetris .tetrimino.Z .mino, .tetrisgrid .Z {
+	background-color: red;
+}
+#htmltetris .tetrimino .mino.invis {
+	visibility: hidden;
+	background-color: transparent;
+}
+#matrix .tetrisgrid .shadow {
+    background-color: #AAA;
+}
+#htmltetris .tetrimino {
+	width: 40%;
+	height: 72px;
+	height: -moz-calc((100% - 3px) / 5);
+	height: -ms-calc((100% - 3px) / 5);
+	height: -webkit-calc((100% - 3px) / 5);
+	height: -o-calc((100% - 3px) / 5);
+	height: calc((100% - 3px) / 5);
+	position: absolute;
+}
+#htmltetris .tetrimino .mino {
+	border: 2px solid rgb(0, 0, 0);
+	border: 2px solid rgba(0, 0, 0, 0.4);
+	display: inline-block;
+	
+	width: 14px;
+	width: -moz-calc(25% - 4px);
+	width: -ms-calc(25% - 4px);
+	width: -webkit-calc(25% - 4px);
+	width: -o-calc(25% - 4px);
+	width: calc(25% - 4px);
+	
+	height: 14px;
+	height: -moz-calc(100% - 4px);
+	height: -ms-calc(100% - 4px);
+	height: -webkit-calc(100% - 4px);
+	height: -o-calc(100% - 4px);
+	height: calc(100% - 4px);
+	vertical-align: top;
+}
+#htmltetris .tetrimino > div {
+	width: 100%;
+	height: 25%;
+}
+#matrix .tetrisgrid {
+	height: 396px;
+	height: -o-calc((100% - 3px) / 10 * 11);
+	height: -ms-calc((100% - 3px) / 10 * 11);
+	height: -webkit-calc((100% - 3px) / 10 * 11);
+	height: -moz-calc((100% - 3px) / 10 * 11);
+	height: calc((100% - 3px) / 10 * 11);
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	background-color: white;
+	
+	/* For game ending */
+	-o-transition-property: opacity;
+	-ms-transition-property: opacity;
+	-webkit-transition-property: opacity;
+	-moz-transition-property: opacity;
+	transition-property: opacity;
+	
+	-o-transition-duration: 500ms;
+	-ms-transition-duration: 500ms;
+	-webkit-transition-duration: 500ms;
+	-moz-transition-duration: 500ms;
+	transition-duration: 500ms;
+}
+#matrix .tetrisgrid .tetriscell {
+	border-color: transparent;
+}
+#matrix .tetrisgrid .empty {
+	border-color: rgb(231, 231, 231);
+}
+#matrix .tetrisgrid .shadow {
+	border-color: transparent;
+}
+#matrix .tetrisgrid .tetriscell {
+	border-color: rgba(0, 0, 0, 0.05);
+	border-style: dotted;
+	border-width: 0 2px;
+	vertical-align: top;
+	width: 14px;
+	width: -moz-calc(10% - 4px);
+	width: -ms-calc(10% - 4px);
+	width: -webkit-calc(10% - 4px);
+	width: -o-calc(10% - 4px);
+	width: calc(10% - 4px);
+	height: 100%;
+	display: inline-block;
+}
+#matrix .tetrisgrid > div {
+	height: 18px;
+	height: -moz-calc((1/22)*100%);
+	height: -ms-calc((1/22)*100%);
+	height: -webkit-calc((1/22)*100%);
+	height: -o-calc((1/22)*100%);
+	height: calc((1/22)*100%);
+	width: 100%;
+}
+#matrixtop {
+	position: relative;
+    background-color: #181515;
+    border-radius: 10px 10px 0 0;
+    margin: 10px 10px 0;
+    overflow: hidden;
+    padding: 2px 7px;
+}
+#htmltetris img.tetrisclick {
+	position: absolute;
+	right: 7px;
+	cursor: pointer;
+	transition-duration: 500ms;
+}
+#htmltetris img.tetrisclick:hover {
+	opacity: 0.7;
+}
+#htmltetris .tetrismain {
+	float: left;
+	height: 363px;
+	margin-bottom: 15px;
+	position: relative;
+}
+#matrixright, #matrixleft {
+	background-color: #181515;
+	border-color: #181515;
+	border-style: solid;
+	border-width: 0 7px 10px;
+	width: 21.5%;
+}
+#matrixleft {
+	border-bottom-left-radius: 10px;
+	margin-left: 10px;
+}
+#matrixright {
+	border-bottom-right-radius: 10px;
+	margin-right: 10px;
+}
+#matrixleft .tetrimino, #matrixright .tetrimino {
+	background-color: white;
+	border: 2px solid black;
+	border-radius: 5px;
+	padding: 5px;
+	width: 72px;
+	width: -moz-calc(100% - 14px);
+	width: -ms-calc(100% - 14px);
+	width: -webkit-calc(100% - 14px);
+	width: -o-calc(100% - 14px);
+	width: calc(100% - 14px);
+	margin-bottom: 7px;
+	position: static;
+}
+#matrix {
+	border-bottom: 10px solid #181515;
+	overflow: hidden;
+	
+	width: 180px;
+	width: -o-calc(57% - 48px);
+	width: -ms-calc(57% - 48px);
+	width: -webkit-calc(57% - 48px);
+	width: -moz-calc(57% - 48px);
+	width: calc(57% - 48px);
+}
+#htmltetris {
+	background-color: #221F1F;
+	border-radius: 30px;
+	padding: 2px;
+	position: relative;
+	width: 400px;
+	margin: 0 auto;
+	
+	font-size: 12pt;
+	line-height: normal;
+	color: #C8C7C8;
+	font-family: sans-serif;
+	text-align: center;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-moz-transform-origin: 50% 0;
+	-ms-transform-origin: 50% 0;
+	-webkit-transform-origin: 50% 0;
+	-o-transform-origin: 50% 0;
+	transform-origin: 50% 0;
+}
+#htmltetris .tetrismessage {
+	/* Describes appearance */
+	background-color: rgb(34,31,31);
+	border-color: white;
+	border-style: solid;
+	border-width: 2px 0;
+	padding: 0 10px;
+	
+	/* Centers */
+    position: absolute;
+    left: 0;
+	right: 0;
+	top: 50%;
+	-ms-transform: translate(0, -50%);
+	-moz-transform: translate(0, -50%);
+	-webkit-transform: translate(0, -50%);
+	-o-transform: translate(0, -50%);
+	transform: translate(0, -50%);
+
+	/* Fading in and out */
+	opacity: 0;
+	-o-transition-duration: 500ms;
+	-ms-transition-duration: 500ms;
+	-webkit-transition-duration: 500ms;
+	-moz-transition-duration: 500ms;
+	transition-duration: 500ms;
+}
+#htmltetris .tetrismessage * {
+	margin: 6px 0;
+}
+#htmltetris .tetrismessage h1 {
+    font-size: 57pt;
+}
+#htmltetris .tetrismessage ul {
+	text-align: left;
+}
+#htmltetris .tetrismessage h2:not(:first-child) {
+	margin-top: 16px;
+}
+#htmltetris .tetrismessage:not(.tetrismenu):hover {
+	cursor: pointer;
+}
+#htmltetris .tetrismessage:not(.tetrismenu):hover {
+	background-color: #504D4D;
+}
+#htmltetris .tetrisbutton {
+	background-color: #221F1F;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-bottom: 7px;
+	padding: 5px;
+	transition-duration: 500ms;
+}
+#htmltetris .tetrisbutton:last-child {
+	margin-bottom: 0;
+}
+#htmltetris .tetrisbutton:hover, #htmltetris .tetrisbutton.tetrisselected {
+	background-color: #504D4D;
+}
+#htmltetris .tetrisoption {
+	display: inline-block;
+	margin: 6px;
+}
+#htmltetris .tetrismain .tetriscontrols {
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	right: 0;
+}
